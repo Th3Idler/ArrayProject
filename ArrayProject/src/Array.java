@@ -1,12 +1,8 @@
 
-public class Array {
- 
-	
-	
-}
+public class Array implements Library {
 	
 
-	
+}
 
 //Rick
 //Gryph
