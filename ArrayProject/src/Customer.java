@@ -4,10 +4,7 @@ public class Customer implements People {
 	private long ID;
 	private String fname;
 	private String lname;
-	
-	
 	@Override
-
 	public long getID() {
 		// TODO Auto-generated method stub
 		return 0;
@@ -28,15 +25,18 @@ public class Customer implements People {
 		return null;
 	}
 	@Override
-	public void setFname(String fname) {
+	public void setLName(String lname) {
 		// TODO Auto-generated method stub
 		
 	}
 	@Override
-	public String getFname(String fname) {
+	public String getLName(String lname) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	
+	
 	
 	
 }
