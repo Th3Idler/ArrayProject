@@ -7,6 +7,9 @@ public interface People {
 	public void setFName(String fname);
 	public String getFName(String fname);
 	
-	public void setFname(String fname);
-	public String getFname(String fname);
+	public void setLName(String lname);
+	public String getLName(String lname);
 }
+
+
+
