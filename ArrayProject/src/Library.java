@@ -1,15 +1,43 @@
 import java.util.Scanner;
 public class Library  {
 	
+	static Customer[] custs = new Customer[3];
+	static Scanner input = new Scanner(System.in);
+	static String answer = "";
+    static book[] books = new book[10];
+
+	
 	public static void main(String[] args)
 	
 	{
 		
-		Scanner input = new Scanner(System.in);
-
-		Customer[] custs = new Customer[3];
-		
+		// Initialize Customer Array
+		custInit();
 		 
+		// Add Customers
+		fillCust();
+		
+		do{
+			System.out.println("What do you want to do?");
+			// get input
+			answer = input.nextLine();
+
+			if (answer.equals("checkout"))
+			{
+				System.out.println("What book");
+				
+				checkout(findItem(input.nextLine()));
+			}
+			
+		} while (!answer.equals("q"));
+
+
+		 
+	}
+	
+	
+	public static void custInit()
+	{
 		 for (int i = 0; i < custs.length; i++)
 		 	{
 			 	custs[i] = new Customer();
@@ -22,6 +50,10 @@ public class Library  {
 			 	custs[i].setID(100+i);
 		 	}	
 	
+	}
+
+	public static void fillCust()
+	{
 		 for (int i = 0; i < custs.length; i++)
 			{ 
 			 System.out.println("Enter Customer No. " + i + "'s first name");
@@ -36,10 +68,18 @@ public class Library  {
 			 System.out.println(custs[i].getFName() + " " + custs[i].getLName());
 			 	custs[i] = new Customer();
 		 	}
-
-		 
 	}
-
+	
+	public static int findItem(String text)
+	{
+		for (int i = 0; i < books.length; i++)
+			if (books[i].getTitle().equals(text))
+				return i;
+		
+		return 0;
+		
+	}
+	
 }
 
 /*
