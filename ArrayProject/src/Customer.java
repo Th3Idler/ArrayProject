@@ -1,17 +1,18 @@
 
 public class Customer implements People {
 
-	private long ID;
+	private long iD;
 	private String FName;
 	private String LName;
 	@Override
 	public long getID() {
-		// TODO Auto-generated method stub
-		return 0;
+		// will return the ID
+		return iD;
 	}
 	@Override
 	public void setID(long id) {
 		// TODO Auto-generated method stub
+		iD = id;
 		
 	}
 	@Override
