@@ -19,18 +19,29 @@ public class Library  {
 		
 		do{
 			System.out.println("What do you want to do?");
+			System.out.println("c for Checkout");
+			System.out.println("i for Checkin");
+			System.out.println("q for quit");
+			
 			// get input
 			answer = input.nextLine();
 
-			if (answer.equals("checkout"))
+			if (answer.equals("c"))
 			{
 				System.out.println("What book");
 				
-				checkout(findItem(input.nextLine()));
+				//checkout(findItem(input.nextLine()));
+			}
+			else if (answer.equals("i"))
+			{
+				System.out.println("What book");
+				
+				//checkin(findItem(input.nextLine()));
 			}
 			
-		} while (!answer.equals("q"));
-
+			
+		} while (!answer.equals("i"));
+		while (!answer.equals("c"));
 
 		 
 	}
@@ -75,6 +86,7 @@ public class Library  {
 		for (int i = 0; i < books.length; i++)
 			if (books[i].getTitle().equals(text))
 				return i;
+		
 		
 		return 0;
 		
