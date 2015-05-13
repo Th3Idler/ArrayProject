@@ -32,7 +32,7 @@ public class Library  {
 				
 				//checkout(findItem(input.nextLine()));
 			}
-			else if (answer.equals("i"))
+			if (answer.equals("i"))
 			{
 				System.out.println("What book");
 				
@@ -40,10 +40,9 @@ public class Library  {
 			}
 			
 			
-		} while (!answer.equals("i"));
-		while (!answer.equals("c"));
-
-		 
+		} 
+	
+		while (!answer.equals("i"));
 	}
 	
 	
